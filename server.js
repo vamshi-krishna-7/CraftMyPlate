@@ -1,10 +1,35 @@
-const express = require('express')
+require('dotenv').config()
+
+const express = require('express');
+const mongoose = require("mongoose");
+const productRoute = require('./routes/productRoute');
+
+const errorMiddleware = require('./middleware/errorMiddleware')
+
 const app = express()
 
-app.get("/", (req, res) => {
-    res.send("Hello Node API")
-})
+const MONGO_URL = process.env.MONGO_URL
+const PORT = process.env.PORT || 3000
 
-app.listen(3000, () => {
-    console.log("Node API app is running on port 3000")
+//middleware
+app.use(express.json())
+
+app.use('/api/products', productRoute)
+
+
+app.use(errorMiddleware)
+
+
+
+// connecting to database
+mongoose.
+connect(MONGO_URL)
+.then(() => {
+    console.log("Connected to MongoDB")
+    app.listen(PORT, () => {
+        console.log(`Node API app is running on port ${PORT}`)
+    })
+})
+.catch((error) => {
+    console.log(error)
 })
