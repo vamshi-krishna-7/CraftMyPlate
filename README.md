@@ -1,11 +1,32 @@
-Node JS API
+# CraftMyPlate Backend API
 
-This project is created to teach you how to create a Restful CRUD API with Node.js, Express and MongoDB.
+It is built using **Node.js**, **Express**, and **MongoDB**. The API supports basic CRUD operations for managing products, allowing users to create, read, update, and delete products in a MongoDB database.
 
-The application can create, read, update and delete data, for example: products, in a database.
+## Table of Contents
 
-Application Link: https://node-api-crud-ye9h.onrender.com
+- [Features](#features)
+- [Technologies](#technologies)
+- [Setup and Installation](#setup-and-installation)
+- [API Endpoints](#api-endpoints)
+- [Environment Variables](#environment-variables)
+- [Error Handling](#error-handling)
+- [Testing](#testing)
+- [Deployment](#deployment)
 
-Try this link with different crud paths:
-1. /api/products
-2. /api/products/id
+---
+
+## Features
+
+- **Create**: Add new product  to the database.
+- **Read**: Retrieve a list of all available product.
+- **Update**: Modify details of an existing product.
+- **Delete**: Remove a product from the database.
+
+## Technologies
+
+- **Node.js**: JavaScript runtime environment.
+- **Express**: Web framework for building API routes.
+- **MongoDB Atlas**: NoSQL database to store and manage products.
+- **Mongoose**: ODM (Object Data Modeling) library for MongoDB.
+- **dotenv**: To manage environment variables securely.
+
