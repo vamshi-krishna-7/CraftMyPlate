@@ -6,3 +6,6 @@ The application can create, read, update and delete data, for example: products,
 
 Application Link: https://node-api-crud-ye9h.onrender.com
 
+Try this link with different crud paths:
+1. /api/products
+2. /api/products/id
