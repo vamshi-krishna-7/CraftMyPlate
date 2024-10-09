@@ -19,6 +19,11 @@ app.use('/api/products', productRoute)
 
 app.use(errorMiddleware)
 
+app.get('/', (req, res) => {
+    res.send('Hello NODE API')
+})
+
+
 
 
 // connecting to database
